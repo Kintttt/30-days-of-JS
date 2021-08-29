@@ -1,12 +1,15 @@
-let container = document.querySelector('#container');
-let paragraph = document.querySelector('#paragraph');
-let btn = document.querySelector('#btn');
+let firstBox = document.getElementById("firstBox")
+let secondBox = document.getElementById("secondBox")
+let thirdBox = document.getElementById("thirdBox")
+let btn = document.getElementById("btn")
+let colors = document.getElementById("colors")
 
-btn.addEventListener('click', function(){
-  let red = (Math.floor(Math.random()*16).toString(16))
-  let green = (Math.floor(Math.random()*16).toString(16))
-  let blue = (Math.floor(Math.random()*16).toString(16))
-  document.body.style.backgroundColor = "#" + red + green + blue;
+btn.addEventListener("click", function(){
+  let allColors = "rgb(" + firstBox.value + ", " + secondBox.value + ", " + thirdBox.value + ")"
+  document.body.style.backgroundColor = allColors
+  colors.innerHTML = "This background has a color of " + allColors
   
-  paragraph.innerText = "This Background has an hexadecimal color of  " + "#" + red + green + blue;
-  });
+  if(0 > firstBox.value || firstBox.value > 255 || 0 > secondBox.value || secondBox.value > 255 || 0 > thirdBox.value || thirdBox.value > 255){
+    alert("Number is invalid. Select a number btwn 0 & 255 ONLY, please")
+  }      
+})

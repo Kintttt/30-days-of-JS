@@ -8,12 +8,27 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-    <div id="container">
-        <h4><p id="paragraph">This Background is color White</p></h4>
-        <button id="btn">
-          <h5>Change Background Here!</h5>
-        </button>
-      </div>
+  <div id="container">
+    <h2>Input a number between 0 and 255 to change the background color of the screen
+    </h2>
+    <main id = "textareas">
+        <div class = "boxes">
+    <p>Box 1</p>
+    <textarea id = "firstBox" placeholder = "place a number between 0 & 255 here"></textarea>
+  </div>
+    <div class = "boxes">
+      <p>Box 2</p>
+    <textarea id = "secondBox" placeholder = "place a number between 0 & 255 here"></textarea>
+    </div>
+    <div class = "boxes">
+      <p>Box 3</p>
+    <textarea id = "thirdBox" placeholder = "place a number between 0 & 255 here"></textarea >
+    </div>
+    </main>
+    <br>
+    <button id = "btn">Change Color!</button>
+    <h4 id = "colors" = "colors"></h4>
+  </div>
 </body>
 <script src = "index.js" defer></script>
 </html>

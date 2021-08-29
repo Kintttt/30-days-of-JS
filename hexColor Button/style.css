@@ -1,7 +1,41 @@
-body{
-    text-align: center;
+#container{
+  width: 100%;
+  height: 100vh;
+  display : flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#textareas{
+  width: 100%;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  border: 1px solid whitesmoke;
+  border-radius: 20px;  
+}
+.boxes{
+  margin : 5%; 
+}
+textarea{
+  width: 100%;
+  border-radius: 10px;
+  
+}
+#btn{
+  padding: 15px;
+  border-radius: 15px;
+  background-color: transparent;
+  border: 5px solid whitesmoke;  
+}
+h2{
+  text-align: center;
+}
+
+@media only screen and (max-width: 375px) {
+  /* For mobile phones: */
+  #textareas{
+    display: block;
   }
-  #btn{
-    border-radius: 15px;
-    border: 1px solid;
-  }
+}
